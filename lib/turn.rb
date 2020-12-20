@@ -36,7 +36,8 @@ def position_taken? (board, index)
     puts "Please enter 1-9:"
     user_input = gets.strip
     index = input_to_index(user_input)
-    if valid_move?(board, index) && position_taken(board, index)
+    if valid_move?(board, index)
+      position_taken(board, index)
       move(board, index, value = "X")
         display_board(board)
     else
